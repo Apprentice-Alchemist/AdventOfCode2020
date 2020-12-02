@@ -1,0 +1,6 @@
+-cp day2
+-cp extra
+
+-m Main
+-hl out.hl
+--cmd hl out.hl
