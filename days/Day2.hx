@@ -1,11 +1,14 @@
 package;
 
-class Main {
-	static final input = Utils.getFileContent("input/input.txt");
+class Day2 implements IDay {
+	static final input = Utils.getFileContent("input/day2.txt");
 	static final regex = ~/(\d+)-(\d+) ([a-zA-Z]): (\w+)/g;
 
-	static function main() {
-		Sys.println("Advent of Code 2020 : Day 2");
+	public final day = 2;
+
+	public function new() {}
+
+	public function run() {
 		function check1(s:String, min:Int, max:Int, what:String):Bool {
 			var count = 0;
 			for (i in 0...s.length)
@@ -34,7 +37,7 @@ class Main {
 				Sys.println('Invalid input : $x');
 			}
 		}
-		Sys.println('Part 1 : $count1 valid passwords found!');
-		Sys.println('Part 2 : $count2 valid passwords found!');
+		Sys.println(' - Part 1 : $count1 valid passwords found!');
+		Sys.println(' - Part 2 : $count2 valid passwords found!');
 	}
 }

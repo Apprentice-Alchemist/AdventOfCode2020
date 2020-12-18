@@ -1,24 +1,27 @@
 package;
 
-class Main {
-	static final input = Utils.getFileContent("input/input.txt");
+class Day1 implements IDay {
+	final input = Utils.getFileContent("input/day1.txt");
 
-	static function main() {
-		Sys.println("Advent of Code 2020 : Day 1");
+	public final day = 1;
+
+	public function new() {}
+
+	public function run() {
 		var answer1 = part1();
 		if (answer1 != null)
-			Sys.println('Part 1 : $answer1')
+			Sys.println(' - Part 1 : $answer1')
 		else
-			Sys.println("No answer found for Part 1");
+			Sys.println(" - No answer found for Part 1");
 
 		var answer2 = part2();
 		if (answer2 != null)
-			Sys.println('Part 2 : $answer2')
+			Sys.println(' - Part 2 : $answer2')
 		else
-			Sys.println("No answer found for Part 2");
+			Sys.println(" - No answer found for Part 2");
 	}
 
-	static function part1():Null<Int> {
+	function part1():Null<Int> {
 		var arr = [for (x in input.split("\n")) Std.parseInt(x)];
 		while (arr.remove(null)) {}
 		for (x in arr) {
@@ -32,7 +35,7 @@ class Main {
 		return null;
 	}
 
-	static function part2():Null<Int> {
+	function part2():Null<Int> {
 		var arr = [for (x in input.split("\n")) Std.parseInt(x)];
 		while (arr.remove(null)) {}
 		for (x in arr) {
