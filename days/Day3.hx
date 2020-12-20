@@ -39,7 +39,8 @@ class Day3 implements IDay {
 		{
 			var trees = countTrees(3, 1);
 			Sys.println(' - Part 1 : $trees trees');
-		} {
+		}
+		{
 			var trees:haxe.Int64 = 1;
 			trees *= countTrees(1, 1);
 			trees *= countTrees(3, 1);

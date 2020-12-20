@@ -26,7 +26,7 @@ class Day1 implements IDay {
 		while (arr.remove(null)) {}
 		for (x in arr) {
 			for (y in arr) {
-				if (x + y == 2020) {
+				if ((x + y) == 2020) {
 					var answer = x * y;
 					return answer;
 				}
